@@ -1,0 +1,4 @@
+cadena HolaMundo;
+HolaMundo = "hola mundo";
+mostrar (HolaMundo);
+

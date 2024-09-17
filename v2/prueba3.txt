@@ -1,0 +1,23 @@
+entero main(){
+entero n;
+n = 25;
+si( n <= 0){
+retornar 1;
+}
+entero a;
+entero b;
+a = 0;
+b = 1;
+mostrar (n);
+entero i;
+i = 1;
+mientras (i < n ) {
+mostrar (a);
+entero next;
+entero a;
+entero b;
+a = b;
+b = next;
+}
+retornar 0;
+}
