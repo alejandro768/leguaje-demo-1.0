@@ -1,0 +1,69 @@
+PROGRAMA -> MAIN SENTENCIAS
+
+MAIN -> principal par_ini EXPRESION par_fin key_ini INICIO retorna id key_fin
+INICIO -> MIENTRAS
+INICIO -> IF
+
+MIENTRAS -> mientras par_ini EXPRESION par_fin BLOQUE
+
+IF -> si par_ini EXPRESION par_fin BLOQUE ELSE
+ELSE -> sino BLOQUE
+ELSE -> ''
+
+BLOQUE -> llave_ini SENTENCIAS llave_fin
+
+
+SENTENCIAS -> SENTENCIA SENTENCIAS_RESTO
+SENTENCIA -> INICIO
+SENTENCIAS -> ''
+
+SENTENCIAS_RESTO -> SENTENCIA SENTENCIAS_RESTO
+SENTENCIAS_RESTO -> ''
+
+DECLARACION -> TIPO_DATO IDENTIFICADORES ASIGNACION_OPT END SENTENCIAS
+DECLARACION -> IDENTIFICADORES ASIGNACION_OPT END
+DECLARACION -> IMPRESION END
+
+ASIGNACION_OPT -> iguanl_asignacion EXPRESION
+ASIGNACION_OPT -> ''
+
+IMPRESION -> imprimir par_ini id par_fin
+
+TIPO_DATO -> entero
+TIPO_DATO -> bool
+TIPO_DATO -> decimales
+TIPO_DATO -> cadena
+
+IDENTIFICADORES -> id IDENTIFICADORES_RESTO
+IDENTIFICADORES_RESTO -> ''
+
+EXPRESION -> TERMINO E'
+E' -> OPER TERMINO
+E' -> ''
+
+OPER -> suma
+OPER -> resta
+OPER -> multplicar
+OPER -> dividir
+OPER -> igual_asignar
+OPER -> Igual_comparar
+TERMINO -> FACTOR T'
+
+T' -> DESICION FACTOR
+T' -> ''
+
+DESICION -> mayor
+DESICION -> menor
+DESICION -> mayor_igual
+DESICION -> menor_igual
+DESICION -> y
+DESICION -> o
+END -> punto_coma
+
+FACTOR -> par_ini EXPRESION par_fin
+FACTOR -> numero
+FACTOR -> decimales
+FACTOR -> id
+
+LITERAL -> verdadero
+LITERAL -> falso
