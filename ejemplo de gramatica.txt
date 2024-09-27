@@ -1,0 +1,29 @@
+---bucle simple
+principal par_ini par_fin key_ini mientras par_ini EXPRESION par_fin BLOQUE retorna id key_fin
+
+---blucle de bules
+
+principal par_ini par_fin key_ini mientras par_ini id oper_may id par_fin key_ini mientras par_ini id oper_may id par_fin key_ini key_fin key_fin retorna id key_fin
+
+---fibonacci
+
+int main(){
+
+    int n,x=0,y=1,z=1;
+
+    cout<<"Escribe el número de elementos ";cin>>n;
+
+    for(int i=1;i<=n;i++){
+
+        z=x+y;
+
+        cout<<z<<" ";
+        x=y; 
+        y=z;  
+    }
+
+    getch();
+    return 0;
+}
+
+principal par_ini par_fin key_ini entero id oper_igual id punto_coma entero id oper_igual id punto_coma entero id oper_igual id punto_coma entero id oper_igual id punto_coma mientras par_ini EXPRESION par_fin BLOQUE  retorna id key_fin

@@ -1,0 +1,74 @@
+PROGRAMA ::= PRINCIPAL SENTENCIAS
+
+PRINCIPAL ::= principal par_ini par_fin key_ini INICIO retorna id key_fin
+
+INICIO ::= SENTENCIAS
+
+MIENTRAS ::= mientras par_ini EXPRESION par_fin BLOQUE
+
+SI ::= si par_ini EXPRESION par_fin BLOQUE SINO_OPCIONAL 
+SINO_OPCIONAL ::= sino BLOQUE
+SINO_OPCIONAL ::= ''
+
+BLOQUE ::= key_ini SENTENCIAS key_fin
+BLOQUE ::= ''
+
+SENTENCIAS ::= SENTENCIA SENTENCIAS_RESTO
+SENTENCIAS ::= ''
+
+SENTENCIAS_RESTO ::= SENTENCIA SENTENCIAS_RESTO
+SENTENCIAS_RESTO ::= ''
+
+SENTENCIA ::= DECLARACION BLOQUE
+SENTENCIA ::= MIENTRAS
+SENTENCIA ::= SI
+
+DECLARACION ::= TIPO_DATO IDENTIFICADORES ASIGNACION_OPT END 
+DECLARACION ::= IDENTIFICADORES ASIGNACION_OPT END
+DECLARACION ::= IMPRESION END
+
+ASIGNACION_OPT ::= oper_igual EXPRESION 
+ASIGNACION_OPT ::= ''
+
+IMPRESION ::= imprimir par_ini id par_fin
+
+TIPO_DATO ::= entero
+TIPO_DATO ::= bool 
+TIPO_DATO ::= decimales 
+TIPO_DATO ::= cadena
+
+IDENTIFICADORES ::= id IDENTIFICADORES_RESTO
+IDENTIFICADORES_RESTO ::= ''
+
+EXPRESION ::= TERMINO E'
+EXPRESION ::= ''
+E' ::= OPER TERMINO E'
+E' ::= ''
+
+OPER ::= oper_sum
+OPER ::= oper_rest
+OPER ::= oper_mult
+OPER ::= oper_div
+OPER ::= oper_igual
+OPER ::= oper_compara
+
+TERMINO ::= FACTOR T'
+T' ::= DESICION FACTOR T'
+T' ::= ''
+
+DESICION ::= oper_may 
+DESICION ::= oper_men 
+DESICION ::= oper_mayigu 
+DESICION ::= oper_menigu 
+DESICION ::= and
+DESICION ::= or
+
+END ::= punto_coma
+
+FACTOR ::= par_ini EXPRESION par_fin 
+FACTOR ::= numero
+FACTOR ::= id
+FACTOR ::= decimal
+FACTOR ::= comillas id comillas
+LITERAL ::= true 
+LITERAL ::= false
